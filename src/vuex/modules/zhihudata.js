@@ -71,7 +71,7 @@ const actions = {
     // 获取首页消息列表
     [types.FECTH_NEWS_LATEST]({commit}) {
         state.LoadingTwo = true
-        axios.get('http://lovestreet.leanapp.cn/zhihu/news/latest')
+        axios.get('https://lovestreet.leanapp.cn/zhihu/news/latest')
             .then(res => {
                 commit(types.TOGGLE_NEWS_LATEST, res.data)
             }).catch(err => console.log(err))
@@ -80,7 +80,7 @@ const actions = {
     [types.FECTH_NEWS_LATEST_MORE]({commit}) {
         state.LoadingOne = true
         var now = state.time.format("YYYYMMDD")
-        axios.get('http://lovestreet.leanapp.cn/zhihu/before/' + now)
+        axios.get('https://lovestreet.leanapp.cn/zhihu/before/' + now)
             .then(res => {
                 commit(types.TOGGLE_NEWS_LATEST_MORE, res.data)
             }).catch(err => console.log(err))
@@ -88,7 +88,7 @@ const actions = {
     // 获取信息详情
     [types.FETCH_NEWS_DETAIL]({commit}, id) {
         state.LoadingTwo = true
-        axios.get('http://lovestreet.leanapp.cn/zhihu/news/' + id)
+        axios.get('https://lovestreet.leanapp.cn/zhihu/news/' + id)
             .then(res => {
                 commit(types.TOGGLE_NEWS_DETAIL, res.data)
             }).catch(err => console.log(err))
@@ -96,7 +96,7 @@ const actions = {
     // 获取日报主题
     [types.FETCH_THEMES]({commit}) {
         state.LoadingTwo = true
-        axios.get('http://lovestreet.leanapp.cn/zhihu/themes')
+        axios.get('https://lovestreet.leanapp.cn/zhihu/themes')
             .then(res => {
                 commit(types.TOGGLE_THEMES, res.data)
             }).catch(err => console.log(err))
@@ -104,7 +104,7 @@ const actions = {
     // 获取主题条目列表
     [types.FETCH_THEMES_list]({commit}, id) {
         state.LoadingTwo = true
-        axios.get('http://lovestreet.leanapp.cn/zhihu/themes/' + id)
+        axios.get('https://lovestreet.leanapp.cn/zhihu/themes/' + id)
             .then(res => {
                 commit(types.TOGGLE_THEMES_LIST, res.data)
             }).catch(err => console.log(err))

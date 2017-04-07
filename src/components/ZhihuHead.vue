@@ -1,7 +1,7 @@
 <template>
 <div>
 	<div class="zhihu-head">
-		<div class="m1 h4 bold pt1 pl2" style="color: black">知乎日报</div>
+		<div class="m1 h4 bold pt1 pl2" style="color: black">知分享</div>
 		<div class="row mt2">
 			<div class="col col-4 center">
 				<router-link class="h5" to="/app">日报</router-link>
@@ -14,7 +14,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 </template>
 
